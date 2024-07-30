@@ -1,0 +1,28 @@
+.signup-form {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+.signup-form input[type=file] {
+    display: none;
+}
+
+.signup-form .add-profile-pic img {
+    height: 40px;
+    margin: 0px;
+    background-color: #00000044;
+    border-radius: 100px;
+    padding: 3px;
+    transition: all 400ms;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.signup-form .add-profile-pic:hover img {
+    height: 100px;
+    background-color: #00000055;
+}

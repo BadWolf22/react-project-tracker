@@ -1,0 +1,34 @@
+.avatar-large {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 40px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar-large img {
+    width: 80px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.avatar-small {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px auto;
+    flex-direction: row-reverse;
+}
+
+.avatar-small img {
+    margin: 0px 10px;
+    width: 40px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.online-indicator {
+    margin-right: auto;
+}
