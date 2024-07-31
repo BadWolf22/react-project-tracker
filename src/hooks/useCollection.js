@@ -1,9 +1,10 @@
-import { collection, getFirestore, onSnapshot } from 'firebase/firestore';
+import { collection, getFirestore, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from "react";
 
-export const useCollection = (collectionName) => {
+export const useCollection = (collectionName, conditions) => {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
+    conditions ??= [];
 
     const handleSnapshot = (snapshot) => {
         let results = snapshot.docs.map(doc => (
@@ -24,9 +25,10 @@ export const useCollection = (collectionName) => {
 
     useEffect(() => {
         let ref = collection(getFirestore(), collectionName);
-        const collectionSubscription = onSnapshot(ref, handleSnapshot, handleSnapshotError);
+        let q = query(ref, conditions);
+        const collectionSubscription = onSnapshot(q, handleSnapshot, handleSnapshotError);
         return () => handleUnmount(collectionSubscription);
-    }, [collectionName]);
+    }, [collectionName, conditions]);
 
     return { documents, error };
 }

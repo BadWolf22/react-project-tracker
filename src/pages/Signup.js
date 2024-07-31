@@ -32,8 +32,6 @@ export default function Signup() {
 
         setProfilePicError(null);
         setProfilePicFile(selected);
-
-        console.log(selected);
     };
 
     useEffect(() => {

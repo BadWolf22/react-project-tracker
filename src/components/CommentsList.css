@@ -1,0 +1,14 @@
+.comments-list {
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+.comment {
+    padding: 3px 10px;
+    margin: 6px 0px;
+    background-color: #fff;
+}
+
+.comment .faded {
+    opacity: 80%;
+}

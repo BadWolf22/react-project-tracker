@@ -89,6 +89,8 @@ textarea {
   margin: 10px 0;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */

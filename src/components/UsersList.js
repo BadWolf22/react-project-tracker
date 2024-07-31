@@ -10,7 +10,7 @@ export default function UsersList() {
             <h2>All Users</h2>
             {error && <div className='error'>{error}</div>}
             {documents && documents.map(user => (
-                <Avatar key={user.id} src={user.photoURL} displayName={user.displayName} isLargeDisplay={false} isOnline={user.online} />
+                <Avatar uid={user.id} key={user.id} src={user.photoURL} displayName={user.displayName} isLargeDisplay={false} isOnline={user.online} />
             ))}
         </div>
     )

@@ -39,11 +39,3 @@
 .project-list li {
     margin-right: 10px;
 }
-
-.project-list .avatar img {
-    width: 40px;
-}
-
-.project-list .avatar {
-    flex-direction: row;
-}

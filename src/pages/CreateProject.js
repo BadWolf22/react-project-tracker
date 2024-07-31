@@ -43,6 +43,7 @@ export default function CreateProject() {
         e.preventDefault();
         setIsPending(true);
         const project = {
+            archived: false,
             name,
             details,
             dueDate: Timestamp.fromDate(new Date(dueDate)),

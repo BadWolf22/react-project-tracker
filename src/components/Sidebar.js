@@ -12,6 +12,7 @@ export default function Sidebar() {
         <div className='sidebar'>
             <div className='sidebar-content'>
                 <Avatar
+                    uid={user?.uid}
                     src={user?.photoURL}
                     displayName={user?.displayName ?? "Hey, Unknown User!"}
                     isLargeDisplay={true}

@@ -1,18 +1,10 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCollection } from '../hooks/useCollection';
+import useUsersDictionary from '../hooks/useUsersDictionary';
 import Avatar from './Avatar';
 import './ProjectCard.css';
 
 export default function ProjectCard({ project }) {
-    const { documents: userDocuments, error } = useCollection("users");
-    const [usersDictionary, setUsersDictionary] = useState(null);
-
-    useEffect(() => {
-        if (userDocuments === null) return;
-        const entriesList = userDocuments.map(doc => [doc.id, doc]);
-        setUsersDictionary(Object.fromEntries(entriesList));
-    }, [userDocuments]);
+    const { usersDictionary } = useUsersDictionary();
 
     return (
         <Link className='project-card' to={`/projects/${project.id}`}>

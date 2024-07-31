@@ -1,0 +1,8 @@
+.dropdowns {
+    display: flex;
+}
+
+.dropdowns .dropdown {
+    margin: 10px;
+    width: 100%;
+}

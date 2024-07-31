@@ -1,0 +1,8 @@
+.add-comment label {
+    margin-bottom: 0px;
+}
+
+.add-comment textarea {
+    min-height: 40px;
+    font-size: 1.5em;
+}
